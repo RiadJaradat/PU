@@ -30,6 +30,8 @@ def main():
             if event.type == pygame.QUIT:
                 isRunning = False
 
+        screen.fill((0, 0, 0))
+
         player_instance.update()
         camera.draw(player_instance)
 
