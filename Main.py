@@ -27,8 +27,8 @@ def main():
     camera.add(player_instance)
 
     NPC1 = pygame.sprite.Sprite()
-    NPC1.image = pygame.image.load("Assets/Player/player.png").convert_alpha()
-    NPC1.image = pygame.transform.scale(pygame.image.load("Assets/Player/player.png").convert_alpha(), (NPC1.image.get_width() * 6, NPC1.image.get_height() * 6))
+    NPC1.image = pygame.image.load("Assets/Player/npc1.png").convert_alpha()
+    NPC1.image = pygame.transform.scale(pygame.image.load("Assets/Player/npc1.png").convert_alpha(), (NPC1.image.get_width() * 6, NPC1.image.get_height() * 6))
     NPC1.rect = NPC1.image.get_rect(topleft=(0, 0))
     camera.add(NPC1)
 
