@@ -11,19 +11,20 @@ clock = pygame.time.Clock()
 
 isRunning = True
 
-def load_settings():
+def load_settings() -> dict:
     with open("Assets/Settings.json", "r") as f:
         settings = json.load(f)
     return settings
 
+
 def main():
     settings = load_settings()
-
+    
     pygame.display.set_caption(settings["TITLE"])
+    pygame.mouse.set_visible(False)
 
     camera = CameraGroup.Camera()
-    player_instance = Player.player(image=Player.image_left, pos=(0,0))
-
+    player_instance = Player.player(image=Player.image_left, pos=(0,0)) # type: ignore
     camera.add(player_instance)
 
     NPC1 = pygame.sprite.Sprite()
